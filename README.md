@@ -1,5 +1,5 @@
 # SRM1
-Standard calculation method 1 for air quality in Netherlands.
+Implementation of the main part of SRM1.
 ## Introduction
 After the synthesis project, the classification of the four road types has been successfully carried out. The next step is to implement the SRM1 model so that for a given location, the air quality of it can be automatically calculated. There is an example use of this program inside the script.
 ## Environment
@@ -31,7 +31,8 @@ There are four mandatory parameters as inputs:
 3. Excel file 'CAR VL3.0, v3_English_Belgium.xlsx'. Providing the program with background concentrations, emission factors, and wind speeds. You can find it in this repository.
 4. Pollutant. Available values are 'NO2', 'PM10', 'PM25', and 'EC'. 'Benzene' not supported yet.
 ## Status
-This program supports the calculation of annual average concentration of NO2, PM10, PM2.5, and EC. Benzene is not supported yet because the calculation of its emission number hasn't been implemented. The following calculations are not supported yet either:
+1. As mentioned above, the CRS is Belge 1972. So this program isn't applicable for loactions in Netherlands now.
+2. This program supports the calculation of annual average concentration of NO2, PM10, PM2.5, and EC. Benzene is not supported yet because the calculation of its emission number hasn't been implemented. The following calculations are not supported yet either:
 * the number of times per year that the twenty-four-hour average concentration of suspended particles (PM10) is higher than the limit value of 50 μg / m3;
 * the 98 percentile of the eight-hour average concentration of carbon monoxide;
 * the number of times per year that the twenty-four-hour average concentration of sulfur dioxide is higher than the limit value of 125 μg / m3;
